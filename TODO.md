@@ -1,0 +1,2 @@
+- [x] Update 'views/listings/index.ejs' to include EJS syntax for looping through allListing and displaying listing details (title, description, price, location, country).
+- [ ] Test the '/listing' route to ensure listings are displayed correctly.
