@@ -8,11 +8,18 @@ const listingSchema = new Schema({
     },
     description: String,
     image: {
+        filename: {
+            type: String,
+            default: "listingimage"
+        },
         url: {
             type: String,
-            default: "https://unsplash.com/photos/gray-wooden-house-178j8tJrNlc",
-        },
-        filename: String,
+            default: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            set: (v) =>
+                v === "" || v === undefined || v === null
+                ? "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                : v,
+        }
     },
     price: Number,
     location: String,
