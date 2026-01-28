@@ -16,5 +16,16 @@
     "express": "^5.2.1",
     "method-override": "^3.0.0",
     "mongoose": "^9.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddheshchaudhari017/major-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/siddheshchaudhari017/major-project/issues"
+  },
+  "homepage": "https://github.com/siddheshchaudhari017/major-project#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }

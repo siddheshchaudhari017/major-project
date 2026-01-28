@@ -1,3 +1,14 @@
+ body {
+   font-family: 'plus jakarta sans', sans-serif !important;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+ }
+
+ .container{
+   flex: 1;
+ }
+ 
  .navbar {
     height: 5rem;
     background-color: #A5A5A5;
@@ -13,3 +24,101 @@
     color: #222222 !important;
     font-weight: 500;
  }
+
+ /* footer */
+
+ .f-info-links a{
+   text-decoration: none;
+   color: #222222;
+ }
+
+  .f-info-links a :hover{
+   text-decoration: underline; 
+ }
+.f-info-links,
+.f-info-socials,
+.f-info-brand{
+   display: flex;
+   align-items: center;
+   width: 100%;
+   justify-content: center;
+   
+}
+.f-info-socials i{
+   font-size: 1.3rem;
+   margin-right: 1rem;
+}
+
+
+ .f-info {
+   text-align: center;
+   height: 8rem;
+   background-color: #ebebeb;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: space-evenly;
+ }
+
+ /* card */
+
+   .card {
+      border:none !important;
+      margin-bottom: 2rem;
+   }
+
+   .card-img-top {
+      border-radius: 1rem !important;
+      width: 100% !important;
+      object-fit: cover !important;
+   }
+
+   .card-body {
+     padding: 0 !important;
+
+   }
+
+   .card-text p{
+      font-weight: 400 !important;
+   }
+   .listing-link{
+      text-decoration: none !important;
+   }
+
+   /* card effect on hover */
+
+   .card-img-overlay {
+      opacity: 0;
+   }
+
+   .card-img-overlay:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0.2;
+      transition: opacity 0.3s ease;
+   }
+
+   /* new page */
+   .add-btn {
+      background-color: #fe424d !important;
+      color: white;
+      border: none;
+   }
+/*    
+   edit page */
+   .editbtn {
+      background-color: #fe424d !important;
+      color: white;
+      border: none;
+   }
+
+   /* show page */
+
+   .show-img{
+      height: 30vh;
+   }
+
+
+   .btns{
+      display: flex;
+      gap: 1rem;
+   }
