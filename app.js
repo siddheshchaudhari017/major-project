@@ -1,3 +1,4 @@
+
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -53,7 +54,11 @@ app.get("/listings/:id", async (req, res) => {
 //create route
 app.post("/listings", async (req, res) => {
     // let { title, description, price, location , country } = req.body;
-    const newListing=new Listing(req.body.listing);
+    let listing = req.body.listing;
+    if (listing.image) {
+        listing.image = { url: listing.image };
+    }
+    const newListing=new Listing(listing);
     await newListing.save();
     res.redirect("/listings");
 });
@@ -68,7 +73,11 @@ app.get("/listings/:id/edit", async (req, res) => {
 //update route
 app.put("/listings/:id", async (req, res) => {
     let {id}=req.params;
-    await Listing.findByIdAndUpdate(id,{...req.body.listing});
+    let listing = req.body.listing;
+    if (listing.image) {
+        listing.image = { url: listing.image };
+    }
+    await Listing.findByIdAndUpdate(id, listing);
     res.redirect(`/listings/${id}`);
 });
 
@@ -79,8 +88,7 @@ app.delete("/listings/:id", async (req, res) => {
     let deletedListing = await Listing.findByIdAndDelete(id);
     console.log(deletedListing);
     res.redirect("/listings");
-}
-);
+});
 
 // app.get("/testListing", async(req,res)=>{
 //     let sampleListing = new Listing({

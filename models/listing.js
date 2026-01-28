@@ -10,7 +10,7 @@ const listingSchema = new Schema({
     image: {
         url: {
             type: String,
-            default: "https://unsplash.com/photos/gray-wooden-house-178j8tJrNlc",
+            default: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG91c2V8ZW58MHx8MHx8fDA%3D",
         },
         filename: String,
     },
